@@ -1,0 +1,24 @@
+.issue-search-wrapper {
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.issue-search-desc-text {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    color: #585858;
+    line-height: 48px;
+}
+
+.issue-search-desc-info {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    color: #d9d9d9;
+    line-height: 32px;
+}
+
+.notification-icon {
+  font-size: 24px;
+}

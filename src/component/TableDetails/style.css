@@ -1,0 +1,26 @@
+.table-issue-tag {
+    padding: 0 7px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    border: 1px solid transparent;
+    border-radius: 2em;
+    color: #ffffff;
+    margin-left: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.issue-title-container {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: #24292f;
+}
+
+.issue-sub-title-container {
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 12px;
+    color: #586069;
+}

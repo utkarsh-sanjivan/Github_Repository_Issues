@@ -1,0 +1,32 @@
+.issues-page-header-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 120px;
+    background-color: #3c4146;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.issues-page-header-title {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: 'Roboto';
+    color: #eef4fc;
+    line-height: 48px;
+}
+
+.issues-page-header-sub-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    color: #eef4fc;
+    line-height: 32px;
+}
+
+.header-back-icon {
+    font-size: 15px;
+    color: #fff;
+    margin-right: 5px;
+    cursor: pointer;
+}
