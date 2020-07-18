@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import * as IssueListActions from './../../store/IssueList/actions';
 import { Icon } from 'antd';
+import { LeftOutlined } from '@ant-design/icons';
 import InputField from '../../component/InputField';
 import notify from '../../component/Notification';
 import TableDetails from '../../component/TableDetails';
@@ -47,14 +48,20 @@ class IssueList extends React.PureComponent {
   render () {
     return (
       <div className="issue-list-wrapper">
+        <div>
+          <div className="issue-list-back-div" onClick={() => this.props.history.push('/')}>
+            <LeftOutlined style={{ marginRight: '5px' }}/> Go Back
+          </div>
+        </div>
         <InputField 
           loading={this.props.issueList.issueListLoading}
           onPressEnter={event => {
-            if (event.target && event.target.value.split('/').length>1) {
-              const user = event.target.value.split('/')[0];
-              const repo = event.target.value.split('/')[1];
-              this.setState({ user, repo });
+            const value = event.target? event.target.value: event
+            if (value.split('/').length>1) {
+              const user = value.split('/')[0];
+              const repo = value.split('/')[1];
               this.props.issueListActions.fetchRepoIssues({ user, repo, page: 1 });
+              this.props.history.push('/issue-list');
             } else {
               const notificationIcon = <Icon
                 type='close-circle'
@@ -69,6 +76,10 @@ class IssueList extends React.PureComponent {
               });
             }
           }}
+          onChange={event => {
+            this.props.issueListActions.updateSeatcText(event.target.value);
+          }}
+          value={this.props.issueList.searchText}
         />
         <TableDetails 
           dataSource={this.state.issueList}

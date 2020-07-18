@@ -3,3 +3,8 @@
     padding-left: 50px;
     padding-right: 50px;
 }
+
+.issue-list-back-div {
+    line-height: 32px;
+    cursor: pointer;
+}

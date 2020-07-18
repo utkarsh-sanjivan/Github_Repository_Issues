@@ -19,9 +19,10 @@ class IssueSearch extends React.PureComponent {
         <div className="issue-search-desc-text">Search Issues</div>
         <InputField 
           onPressEnter={event => {
-            if (event.target && event.target.value.split('/').length>1) {
-              const user = event.target.value.split('/')[0];
-              const repo = event.target.value.split('/')[1];
+            const value = event.target? event.target.value: event;
+            if (value.split('/').length>1) {
+              const user = value.split('/')[0];
+              const repo = value.split('/')[1];
               this.props.issueListActions.fetchRepoIssues({ user, repo, page: 1 });
               this.props.history.push('/issue-list');
             } else {
