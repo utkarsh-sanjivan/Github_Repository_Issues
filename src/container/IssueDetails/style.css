@@ -17,10 +17,12 @@
     color: #586069;
     font-weight: 500;
     margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: #e1e4e8 2px solid;
 }
 
 .issue-details-comment-container {
-    padding: 20px 20px 0px 20px;
+    padding: 30px 20px 0px 20px;
     border-top-color: #e1e4e8;
     border-top-width: 2px;
     border-top-style: solid;
@@ -31,7 +33,7 @@
 }
 
 .issue-tag-card {
-    padding: 0 7px;
+    padding: 5px 7px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
@@ -48,4 +50,33 @@
 
 .details-skeleton {
     padding: 50px 50px 50px 50px;
+}
+
+.issue-details-description-content {
+    line-height: 21px;
+    color: rgb(36, 41, 46);
+    font-size: 14px;
+    overflow-wrap: break-word;
+    padding: 10px 20px 10px 20px;
+}
+
+.issue-desc-header {
+    padding: 10px 20px 10px 20px;
+    background-color: #f6f8fa;
+}
+
+.issue-details-raisedby-avatar {
+    margin-right: 10px;
+}
+.issue-details-raisedby-description {
+    font-size: 12px;
+    line-height: 18px;
+    color: #ccc;
+    white-space: nowrap;
+}
+
+.issue-details-description-container {
+    border: #e1e4e8 1px solid;
+    border-radius: 8px;
+    margin-bottom: 25px;
 }

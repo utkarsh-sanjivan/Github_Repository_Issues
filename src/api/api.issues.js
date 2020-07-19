@@ -12,6 +12,7 @@ export async function fetchRepoIssuesAPI(params) {
       open: issue.state === 'open',
     }));
   }
+  debugger;
   throw response.status;
 }
 

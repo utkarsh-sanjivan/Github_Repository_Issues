@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
-import { Skeleton } from 'antd';
+import MarkdownGithub from 'react-markdown-github';
+import { Skeleton, Avatar } from 'antd';
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import * as IssueListActions from './../../store/IssueList/actions';
 import StatusTag from './../../component/StatusTag/index';
@@ -64,11 +65,13 @@ class IssueDetails extends React.PureComponent {
                     <span><b>{this.state.currentIssue && this.state.currentIssue.user.login}</b> openened this issue {this.state.currentIssue && formatDateString(this.state.currentIssue.created_at)}, {this.props.issueList.commentList.length} comments</span>
                 </div>
                 <div className="issue-details-description-container">
-                    <CommentBox 
-                        author={this.state.currentIssue && this.state.currentIssue.raisedBy}
-                        avatar={this.state.currentIssue && this.state.currentIssue.user.avatar_url}
-                        content={this.state.currentIssue && this.state.currentIssue.body}
-                        datetime={this.state.currentIssue && ` commented ${formatDateString(this.state.currentIssue.created_at)}`}
+                    <div className="issue-desc-header">
+                        <Avatar src={this.state.currentIssue && this.state.currentIssue.user.avatar_url} className='issue-details-raisedby-avatar'/>
+                        <span className="issue-details-raisedby-description"><b>{this.state.currentIssue && this.state.currentIssue.user.login}</b> {this.state.currentIssue && ` posted ${formatDateString(this.state.currentIssue.created_at)}`}</span>
+                    </div>
+                    <MarkdownGithub 
+                        source={this.state.currentIssue && this.state.currentIssue.body}
+                        className='issue-details-description-content'
                     />
                 </div>
                 <div className="tags-container">
@@ -76,7 +79,7 @@ class IssueDetails extends React.PureComponent {
                         <span 
                             style={{ 
                                 backgroundColor: `#${value.color}`,
-                                color: `${value.color === 'ffffff'? '#000000': '#ffffff'}`,
+                                color: `${value.color === '000'? '#fff': '#000'}`,
                                 border: `${value.color === 'ffffff'? '#9ca2a8 1px solid': 'none'}`,
                             }}
                             className="issue-tag-card"
@@ -93,12 +96,16 @@ class IssueDetails extends React.PureComponent {
                             active
                         />
                         : this.state.commentList && this.state.commentList.map(comment => (
-                            <CommentBox 
-                                author={comment.user.login}
-                                avatar={comment.user.avatar_url}
-                                content={comment.body}
-                                datetime={` commented ${formatDateString(comment.created_at)}`}
-                            />
+                            <div className="issue-details-description-container">
+                                <div className="issue-desc-header">
+                                    <Avatar src={comment.user.avatar_url} className='issue-details-raisedby-avatar'/>
+                                    <span className="issue-details-raisedby-description"><b>{comment.user.login}</b> {this.state.currentIssue && ` commented ${formatDateString(comment.created_at)}`}</span>
+                                </div>
+                                <MarkdownGithub 
+                                    source={comment.body}
+                                    className='issue-details-description-content'
+                                />
+                            </div>
                         ))
                     }
                 </div>
