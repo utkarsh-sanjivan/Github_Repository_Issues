@@ -7,7 +7,6 @@ import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import * as IssueListActions from './../../store/IssueList/actions';
 import StatusTag from './../../component/StatusTag/index';
 import { formatDateString } from './../../utils/dateFormatter';
-import CommentBox from './../../component/CommentBox/index';
 import localStore from './../../utils/localStorage';
 import './style.css';
 

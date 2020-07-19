@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Github Markdown Component in Issue Details 1`] = `
+<p>
+  This is a test github comment body
+</p>
+`;
