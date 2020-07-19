@@ -5,7 +5,6 @@
     line-height: 18px;
     border: 1px solid transparent;
     border-radius: 2em;
-    color: #ffffff;
     margin-left: 5px;
     white-space: nowrap;
     cursor: pointer;
@@ -20,7 +19,24 @@
 
 .issue-sub-title-container {
     cursor: pointer;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 12px;
-    color: #586069;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 50px;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+}
+
+.table-label-cells {
+    max-width: 300px;
+}
+
+.table-raisedby-avatar {
+    margin-right: 10px;
+}
+
+.table-empty-image{
+    margin-top: 120px;
 }

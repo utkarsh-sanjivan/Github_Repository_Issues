@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
+import { CloseCircleOutlined } from '@ant-design/icons';
 import * as IssueListActions from './../../store/IssueList/actions';
-import { Icon } from 'antd';
-import InputField from '../../component/InputField';
 import notify from '../../component/Notification';
+import InputField from '../../component/InputField';
+import localStore from './../../utils/localStorage';
 import './style.css';
 
 class IssueSearch extends React.PureComponent {
@@ -23,19 +24,14 @@ class IssueSearch extends React.PureComponent {
             if (value.split('/').length>1) {
               const user = value.split('/')[0];
               const repo = value.split('/')[1];
+              localStore.setItem('searchParams', { user, repo });
               this.props.issueListActions.fetchRepoIssues({ user, repo, page: 1 });
               this.props.history.push('/issue-list');
             } else {
-              const notificationIcon = <Icon
-                type='close-circle'
-                theme='twoTone'
-                twoToneColor='red'
-                className='notification-icon'
-              />;
               notify({
                 message: 'Please type in user/repo format',
                 placement: 'topRight',
-                icon: notificationIcon,
+                icon: <CloseCircleOutlined twoToneColor='red' className='notification-icon'/>,
               });
             }
           }}
