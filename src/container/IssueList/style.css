@@ -9,3 +9,8 @@
     cursor: pointer;
     margin-bottom: 10px;
 }
+
+.notification-icon {
+    font-size: 24px;
+    color: #ed3833;
+}

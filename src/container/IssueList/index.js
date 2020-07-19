@@ -26,8 +26,7 @@ class IssueList extends React.PureComponent {
   }
 
   componentDidUpdate(prevProps) {
-    if ( prevProps.issueList.issueList.length !== this.props.issueList.issueList.length ) {
-      const pageNumber = this.state.pageNumber;
+    if ( JSON.stringify(prevProps.issueList.issueList) !== JSON.stringify(this.props.issueList.issueList) ) {
       this.setState({ issueList: this.props.issueList.issueList }, () => {
         if (this.props.issueList.issueList.length === 30) {
           const { user, repo } = localStore.getItem('searchParams');
@@ -42,7 +41,7 @@ class IssueList extends React.PureComponent {
       notify({
         message: 'Internal Server Error',
         placement: 'topRight',
-        icon: <CloseCircleOutlined twoToneColor='red' className='notification-icon'/>,
+        icon: <CloseCircleOutlined twoToneColor='#ed3833' className='notification-icon'/>,
       });
     }
   }
@@ -90,7 +89,6 @@ class IssueList extends React.PureComponent {
   }
 
   onHandleChangeTable = (pagination, filters, sorter) => {
-    debugger;
     if (Object.keys(sorter).length>0) {
       this.setState({
         sortOrder: sorter,

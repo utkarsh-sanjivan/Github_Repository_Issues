@@ -31,7 +31,7 @@ class IssueSearch extends React.PureComponent {
               notify({
                 message: 'Please type in user/repo format',
                 placement: 'topRight',
-                icon: <CloseCircleOutlined twoToneColor='red' className='notification-icon'/>,
+                icon: <CloseCircleOutlined twoToneColor='#ed3833' className='notification-icon'/>,
               });
             }
           }}

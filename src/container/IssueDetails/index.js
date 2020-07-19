@@ -29,15 +29,12 @@ class IssueDetails extends React.PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        if (
-            prevProps.issueList.commentList.length !== this.props.issueList.commentList.length &&
-            this.props.issueList.commentList.length !== 0
-        ) {
+        if ( JSON.stringify(prevProps.issueList.commentList) !== JSON.stringify(this.props.issueList.commentList) ) {
            this.setState({ commentList: this.props.issueList.commentList });
         }
         if (
-            Object.keys(prevProps.issueList.issue).length !== Object.keys(this.props.issueList.issue).length &&
-            Object.keys(this.props.issueList.issue).length !== 0
+            prevProps.issueList.issue.id !== this.props.issueList.issue.id &&
+            prevProps.issueList.issue.number !== this.props.issueList.issue.number
         ) {
            this.setState({ currentIssue: this.props.issueList.issue });
         }
