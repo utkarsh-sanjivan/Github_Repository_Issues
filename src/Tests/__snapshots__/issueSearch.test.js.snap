@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Input Field Component in Issue Search 1`] = `
+<span
+  className="ant-input-search issues-search-field ant-input-search-enter-button ant-input-group-wrapper"
+>
+  <span
+    className="ant-input-wrapper ant-input-group"
+  >
+    <input
+      className="ant-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="username/repo"
+      style={null}
+      type="text"
+      value="Test Text"
+    />
+    <span
+      className="ant-input-group-addon"
+    >
+      <button
+        className="ant-btn ant-input-search-button ant-btn-primary"
+        onClick={[Function]}
+        onMouseDown={[Function]}
+        type="button"
+      >
+        <span>
+          Search
+        </span>
+      </button>
+    </span>
+  </span>
+</span>
+`;
+
+exports[`Test Notification Component in Issue Search 1`] = `null`;
