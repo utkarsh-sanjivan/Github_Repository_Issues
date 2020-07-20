@@ -51,7 +51,7 @@ const TableDetails = props => {
   ];
 
   return (
-    <div style={{ marginTop: '25px' }}>
+    <div className="issue-table-container">
       {props.loading && props.dataSource.length<31?
         <Skeleton 
           loading={true}

@@ -40,11 +40,7 @@ exports[`Test Notification Component in Issue List 1`] = `null`;
 
 exports[`Test Table Details Component in Issue List 1`] = `
 <div
-  style={
-    Object {
-      "marginTop": "25px",
-    }
-  }
+  className="issue-table-container"
 >
   <div
     className="ant-empty table-empty-image"
