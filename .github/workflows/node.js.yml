@@ -39,7 +39,7 @@ jobs:
       run: |
         git config --global user.name utkarsh-sanjivan
         git config --global user.email utkarsh.sannu@gmail.com
-        git remote set-url origin https://ACTIONS_DEPLOY_ACCESS_TOKEN@github.com/utkarsh-sanjivan/Github_Repository_Issues
+        git remote set-url origin https://e7f632e429b372d4cbcc17f86b7bf91b9fd47fc3@github.com/utkarsh-sanjivan/Github_Repository_Issues
         npm run deploy
       env:
         user_name: 'github-actions[bot]'
