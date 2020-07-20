@@ -44,5 +44,5 @@ jobs:
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
-        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+        github_token: ${{ secrets.TOKEN_FOR_REPO_DEPLOY }}
         repository: 'utkarsh-sanjivan/Github_Repository_Issues'
