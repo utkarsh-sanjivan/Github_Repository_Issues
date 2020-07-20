@@ -50,7 +50,7 @@ class IssueList extends React.PureComponent {
     return (
       <div className="issue-list-wrapper">
         <div>
-          <div className="issue-list-back-div" onClick={() => this.props.history.push('/')}>
+          <div className="issue-list-back-div" onClick={() => this.props.history.push('/Github_Repository_Issues/')}>
             <LeftOutlined style={{ marginRight: '5px' }}/> Go Back
           </div>
         </div>
@@ -64,7 +64,7 @@ class IssueList extends React.PureComponent {
               localStore.setItem('searchParams', { user, repo });
               this.setState({ pageNumber: 1 })
               this.props.issueListActions.fetchRepoIssues({ user, repo, page: 1 });
-              this.props.history.push('/issue-list');
+              this.props.history.push('/Github_Repository_Issues/issue-list');
             } else {
               notify({
                 message: 'Please type in user/repo format',

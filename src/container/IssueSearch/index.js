@@ -26,7 +26,7 @@ class IssueSearch extends React.PureComponent {
               const repo = value.split('/')[1];
               localStore.setItem('searchParams', { user, repo });
               this.props.issueListActions.fetchRepoIssues({ user, repo, page: 1 });
-              this.props.history.push('/issue-list');
+              this.props.history.push('/Github_Repository_Issues/issue-list');
             } else {
               notify({
                 message: 'Please type in user/repo format',
