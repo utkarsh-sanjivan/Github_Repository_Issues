@@ -8,11 +8,11 @@ import IssueDetails from './container/IssueDetails/index';
 const Routing = props => (
   <div>
     <IssueHeader />
-    <HashRouter basename='/'>
+    <HashRouter basename='/Github_Repository_Issues'>
       <Switch>
-        <Route exact path="/Github_Repository_Issues" component={IssueSearch} />
-        <Route exact path="/Github_Repository_Issues/issue-list" component={IssueList} />
-        <Route exact path="/Github_Repository_Issues/issue-details/:issueId" component={IssueDetails} />
+        <Route exact path="/" component={IssueSearch} />
+        <Route exact path="/issue-list" component={IssueList} />
+        <Route exact path="/issue-details/:issueId" component={IssueDetails} />
       </Switch>
     </HashRouter>
   </div>
