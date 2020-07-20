@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, BrowserRouter as Router, HashRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import IssueHeader from './component/Header/index';
 import IssueSearch from './container/IssueSearch/index';
 import IssueList from './container/IssueList/index';
