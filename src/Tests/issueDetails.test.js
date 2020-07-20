@@ -1,5 +1,6 @@
 import React from 'react';
 import { create } from "react-test-renderer";
+import { CheckOutlined } from '@ant-design/icons';
 import StatusTag from './../component/StatusTag/index';
 import MarkdownGithub from 'react-markdown-github';
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Input Field Component 1`] = `
+exports[`Test Input Field Component in Issue Search 1`] = `
 <span
   className="ant-input-search issues-search-field ant-input-search-enter-button ant-input-group-wrapper"
 >
@@ -35,3 +35,5 @@ exports[`Test Input Field Component 1`] = `
   </span>
 </span>
 `;
+
+exports[`Test Notification Component in Issue Search 1`] = `null`;
