@@ -10,9 +10,9 @@ const Routing = props => (
     <IssueHeader />
     <Router>
       <Switch>
-        <Route exact path="/" component={IssueSearch} />
-        <Route exact path="/issue-list" component={IssueList} />
-        <Route exact path="/issue-details/:issueId" component={IssueDetails} />
+        <Route exact path="/Github_Repository_Issues" component={IssueSearch} />
+        <Route exact path="/Github_Repository_Issues/issue-list" component={IssueList} />
+        <Route exact path="/Github_Repository_Issues/issue-details/:issueId" component={IssueDetails} />
       </Switch>
     </Router>
   </div>
