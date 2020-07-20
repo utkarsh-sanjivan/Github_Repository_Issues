@@ -11,8 +11,6 @@ exports[`Test Header Component 1`] = `
   </div>
   <div
     className="issues-page-header-sub-title"
-  >
-    Search issues from a public repository of a user
-  </div>
+  />
 </div>
 `;
