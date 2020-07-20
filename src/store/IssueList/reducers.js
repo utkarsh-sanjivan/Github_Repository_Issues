@@ -26,7 +26,7 @@ const INITIAL_STATE = {
 
 export function reducer ( state = INITIAL_STATE, action) {
     switch ( action.type ) {
-        case FETCH_REPO_ISSUES_REQUESTED: {
+        case FETCH_REPO_ISSUES_REQUESTED:
             return {
                 ...state,
                 searchText: `${action.payload.user}/${action.payload.repo}`,
@@ -34,25 +34,22 @@ export function reducer ( state = INITIAL_STATE, action) {
                 issueList: action.payload.page === 1? []: state.issueList,
                 issueListError: false,
             };
-        };
 
-        case FETCH_REPO_ISSUES_SUCCESS: {
+        case FETCH_REPO_ISSUES_SUCCESS: 
             return {
                 ...state,
                 issueListLoading: false,
                 issueList: [ ...state.issueList, ...action.payload ],
                 issueListError: false,
             };
-        };
 
-        case FETCH_REPO_ISSUES_FAILURE: {
+        case FETCH_REPO_ISSUES_FAILURE: 
             return {
                 ...state,
                 issueListLoading: false,
                 issueList: [],
                 issueListError: action.payload.status !== 404,
             };
-        };
 
         case UPDATE_SEARCH_TEXT:
             return {
