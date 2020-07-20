@@ -32,7 +32,7 @@ const TableDetails = props => {
       key: 'title',
       render: (value, record) => (
         <div>
-          <div onClick={() => window.open(`/Github_Repository_Issues/issue-details/${record.number}`, '_blank')} className="issue-title-container">{value}</div>
+          <div onClick={() => window.open(`/issue-details/${record.number}`, '_blank')} className="issue-title-container">{value}</div>
           <div style={{ backgroundColor: `${record.open? '#28a745': '#f50'}` }} className="issue-sub-title-container">{record.open? 'Open': 'Close'}</div>
         </div>
       ),

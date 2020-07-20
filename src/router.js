@@ -8,7 +8,7 @@ import IssueDetails from './container/IssueDetails/index';
 const Routing = props => (
   <div>
     <IssueHeader />
-    <HashRouter basename='/Github_Repository_Issues'>
+    <HashRouter basename='/'>
       <Switch>
         <Route exact path="/" component={IssueSearch} />
         <Route exact path="/issue-list" component={IssueList} />
