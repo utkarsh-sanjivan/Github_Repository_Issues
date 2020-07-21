@@ -2,11 +2,7 @@
 
 exports[`Test Table Details Component 1`] = `
 <div
-  style={
-    Object {
-      "marginTop": "25px",
-    }
-  }
+  className="issue-table-container"
 >
   <div
     className="ant-empty table-empty-image"

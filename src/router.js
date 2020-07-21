@@ -13,6 +13,7 @@ const Routing = props => (
         <Route exact path="/" component={IssueSearch} />
         <Route exact path="/issue-list" component={IssueList} />
         <Route exact path="/issue-details/:issueId" component={IssueDetails} />
+        <Route exact path="*" component={IssueSearch} />
       </Switch>
     </HashRouter>
   </div>

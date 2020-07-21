@@ -72,11 +72,11 @@
     font-size: 12px;
     line-height: 18px;
     color: #ccc;
-    white-space: nowrap;
 }
 
 .issue-details-description-container {
     border: #e1e4e8 1px solid;
     border-radius: 8px;
     margin-bottom: 25px;
+    overflow-x: scroll;
 }
